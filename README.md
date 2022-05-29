@@ -1,3 +1,3 @@
 # Thomas Dillard
 My github pages website...
-https://thomasdillard1.github.io./ 
+https://thomasdillard1.github.io
