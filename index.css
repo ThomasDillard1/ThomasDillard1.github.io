@@ -1,3 +1,18 @@
-.card-img-circle {
+.card-img {
+    height: 100%;
     object-fit: cover;
   }
+  
+  @media (min-width: 768px) {
+    .card {
+        display: flex;
+    }
+    .card-img {
+      max-width: 100%;
+    }
+  }
+
+  .profile-picture {
+    border: 2px solid red;
+  }
+  
