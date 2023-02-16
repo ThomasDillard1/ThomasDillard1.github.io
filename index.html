@@ -6,7 +6,7 @@
         <link rel="shortcut icon" type="image/png" href="images/Letter D logo.png"/>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="index.css" />
+		<link rel="stylesheet" href="index.css"/>
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 	</head>
 	<body>
@@ -24,12 +24,13 @@
 			</div>
 		</nav>
 
-		<!-- Photo & Introduction -->
+		<!-- Container for Content -->
 		<div class="container-fluid" style="padding-top: 100px; background-color:  #365475;">
-			<div class="card mb-3 border border-dark" >
+			<!-- Photo & Introduction -->
+			<div class="card mb-3 border border-dark" style="background-color: #f5f5f5;">
 				<div class="row no-gutters">
 					<div class="col-sm-4 col-lg-3 col-xl-2">
-						<img src="/images/pfp.jpg" class="card-img" alt="...">
+						<img src="/images/pfp.jpg" id="profile-img" class="card-img border border-start-0 border-top-0 border-bottom-0 border-dark" alt="...">
 					</div>
 					<div class="col-sm-8 col-lg-9 col-xl-10">
 						<div class="card-body">
@@ -40,9 +41,22 @@
 					</div>
 				</div>
 			</div>
-			<div>
-				<p>more content to be seen here</p>
-			</div>
+			<!-- Delineation Card -->
+			<div class="card"></div>
+
+			<!-- Project Cards -->
+			<div class="card shadow-sm my-5 rounded-4" style="background-color: #365495; border: none;">
+				<div class="card-body mx-2 my-2">
+				  <div class="d-flex justify-content-between gitLink">
+					<h4 class="card-title" style="text-decoration: underline;text-decoration-color: #ff6e31;text-underline-offset: 0.31em;">Portfolio Website</h4>
+					<a class="nav-link mx-1" href="https://github.com/JayChadha-uva/jaychadha-uva.github.io" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+				</div>            
+				  <h6 class="card-subtitle mt-2 mb-1" style="opacity: 0.55;">December 2022</h6>
+				  <p class="card-text mb-1">The website you are on now. Made from scratch with ❤️ in Virginia.</p>
+				  <small style="opacity: 0.55;font-size: medium;">HTML, CSS, Bootstrap 5.2</small>
+				  <div class="job mt-2"><a href="/" target="_blank">View Project <i class="bi bi-arrow-up-right"></i></a></div>
+				</div>
+			  </div>
 		</div>		  
 
 
@@ -101,26 +115,24 @@
 				<p>See what companies have earnings calls next.</p>
 			</div>
 		</a>
-		<a href="https://video-chat-163ed.web.app/">
-			<h2>Video Chat App</h2>
-			<div class="content">
-				<p>Test out this simple video chat app with a friend.</p>
-			</div>
-		</a>
-		<h2>Word of Mouth</h2>
-			<div class="content">
-				<p>Share your family recipe with the world.</p>
-			</div>
-		</a>
-
-		<a href="/EarningsCalls/earnings.html">
-			<h2>Earnings Call Tracker</h2>
-			<div class="content">
-				<p>See what companies have earnings calls next.</p>
-			</div>
-		</a>
 		<!-- Scripts -->
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-		  
+		<script>
+			// Function to remove border from the image if screen size is less than 576px
+			function removeImageBorder() {
+				var profileImg = document.getElementById("profile-img");
+				
+				if (window.innerWidth < 576) {
+					profileImg.classList.remove("border", "border-top-0", "border-bottom-0", "border-dark");
+				}
+				else {
+					profileImg.classList.add("border", "border-top-0", "border-bottom-0", "border-dark");
+				}
+			}
+		
+			// Call the function on page load and whenever the window is resized
+			window.onload = removeImageBorder;
+			window.onresize = removeImageBorder;
+		</script>
 	</body>
 </html>
