@@ -17,3 +17,16 @@
     background-color: #F7F9FF;
   }
 /*offwhite color selection --> style="background-color: #F7F9FF;
+*/
+  .view-code a{
+    color:#E57200;
+    font-weight: 450;
+    text-decoration: none;
+
+  }
+  
+  .view-code i{
+    padding-left: 3px;
+    font-size: small;
+    color: #E57200;
+  }
